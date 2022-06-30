@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <!-- <img src="template.PNG"> -->
-    <div>
+    <div id="outer">
         <h1>Sly Golds</h1>
         <h3>Episode Races</h3>
-        <div>
-            <div>
+        <div class="clearfix" >
+            <div id="leftcol">
                 <ul>
                     <h2>G2 Esports</h2>
                     <li>Bvr</li>
@@ -21,7 +25,7 @@
 
                 </ul>
             </div>
-            <div>
+            <div id="rightcol">
                 <ul>
                     <h2>Cloud9 Espots</h2>
                     <li>notBvr</li>
@@ -34,9 +38,69 @@
         </div>
         <div>
             <!-- images -->
+            <img id="yourElement" src="episode1.png">
             <img src="episode1.png">
-             
+            <img src="episode1.png">
+            <img src="episode1.png">
+            <img src="episode1.png">
+            <img src="episode1.png">
+            <img src="episode1.png">
+            <img src="episode1.png">
         </div>
     </div>
+    <br><br><br><br>
+
+    <div id="controls" class="box">
+        <div id ="btnstuff">
+            <div class="btngroup">
+                <button onclick="animateMe()">ban me</button>
+                <button>pick me(blue)</button>
+                <button>pick me(red)</button>
+            </div>
+            <div class="btngroup">
+                <button>ban me</button>
+                <button>pick me(blue)</button>
+                <button>pick me(red)</button>
+            </div>
+            <div class="btngroup">
+                <button>ban me</button>
+                <button>pick me(blue)</button>
+                <button>pick me(red)</button>
+            </div>
+            <div class="btngroup">
+                <button>ban me</button>
+                <button>pick me(blue)</button>
+                <button>pick me(red)</button>
+            </div>
+            <div class="btngroup">
+                <button>ban me</button>
+                <button>pick me(blue)</button>
+                <button>pick me(red)</button>
+            </div>
+            <div class="btngroup">
+                <button>ban me</button>
+                <button>pick me(blue)</button>
+                <button>pick me(red)</button>
+            </div>
+            <div class="btngroup">
+                <button>ban me</button>
+                <button>pick me(blue)</button>
+                <button>pick me(red)</button>
+            </div><div class="btngroup">
+                <button>ban me</button>
+                <button>pick me(blue)</button>
+                <button>pick me(red)</button>
+            </div>
+
+        </div>
+            
+
+        this is a controls</div>
+        <script>
+            function animateMe() {
+                document.getElementById('controls').classList.add('active-animation');
+                console.log("Wtf");
+            }
+        </script>
 </body>
 </html>
