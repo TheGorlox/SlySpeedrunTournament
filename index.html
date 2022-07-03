@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
@@ -13,39 +14,69 @@
 <body>
     <!-- <img src="template.PNG"> -->
     <div id="outer">
-        <h1>Sly Golds</h1>
-        <h3>Episode Races</h3>
+        <h1>SLYGOLDS</h1>
+        <h3>EPISODE RACES</h3>
+        <img class="team1Image" src="images/scuffed g2 logo.png">
+        <img class="team2Image" src="images/c9 logo.png">
         <div class="clearfix" >
             <div id="leftcol">
+                
                 <ul>
-                    <h2>G2 Esports</h2>
-                    <li>Bvr</li>
-                    <li>Gandy</li>
-                    <li>Stevens</li>
+                    <h2>G2 ESPORTS</h2>
+                    <h2 id = "team1Record">(1-1)</h2>
+                    <li>BVR</li>
+                    <li>GANDY</li>
+                    <li>STEVENS</li>
 
                 </ul>
             </div>
             <div id="rightcol">
+                
                 <ul>
-                    <h2>Cloud9 Espots</h2>
-                    <li>notBvr</li>
-                    <li>notGandy</li>
-                    <li>notStevens</li>
+                    <h2 id = "team2Record">(0-2)</h2>
+                    <h2>CLOUD9 ESPOTS</h2>
+                    <li>NOTBVR</li>
+                    <li>NOTGANDY</li>
+                    <li>NOTSTEVENS</li>
 
                 </ul>
             </div>
 
         </div>
-        <div class="epImages">
+        <div class="epImages clearfix">
             <!-- images -->
-            <img id="yourElement" src="images/episode panels/ep1.png">
-            <img src="images/episode panels/ep2.png">
-            <img src="images/episode panels/ep3.png">
-            <img src="images/episode panels/ep4.png">
-            <img src="images/episode panels/ep5.png">
-            <img src="images/episode panels/ep6.png">
-            <img src="images/episode panels/ep7.png">
-            <img src="images/episode panels/ep8.png">
+            <div id="ep1" class="epParent">
+                <img class="ep" src="images/episode panels/ep1.png">
+                <img class="overlay" src="images/episode panels/blank.png">
+            </div>
+            <div id="ep2" class="epParent">
+                <img class="ep" src="images/episode panels/ep2.png">
+                <img class="overlay" src="images/episode panels/blank.png">
+            </div>
+            <div id="ep3" class="epParent">
+                <img class="ep" src="images/episode panels/ep3.png">
+                <img class="overlay" src="images/episode panels/blank.png">
+            </div>
+            <div id="ep4" class="epParent">
+                <img class="ep" src="images/episode panels/ep4.png">
+                <img class="overlay" src="images/episode panels/blank.png">
+            </div>
+            <div id="ep5" class="epParent">
+                <img class="ep" src="images/episode panels/ep5.png">
+                <img class="overlay" src="images/episode panels/blank.png">
+            </div>
+            <div id="ep6" class="epParent">
+                <img class="ep" src="images/episode panels/ep6.png">
+                <img class="overlay" src="images/episode panels/blank.png">
+            </div>
+            <div id="ep7" class="epParent">
+                <img class="ep" src="images/episode panels/ep7.png">
+                <img class="overlay" src="images/episode panels/blank.png">
+            </div>
+            <div id="ep8" class="epParent">
+                <img class="ep" src="images/episode panels/ep8.png">
+                <img class="overlay" src="images/episode panels/blank.png">
+            </div>
         </div>
     </div>
     <br><br><br><br>
@@ -53,43 +84,52 @@
     <div id="controls" class="box">
         <div id ="btnstuff">
             <div class="btngroup">
-                <button onclick="animateMe()">ban me</button>
-                <button>pick me(blue)</button>
-                <button>pick me(red)</button>
+                <button onclick="banEp(1)">Ban</button>
+                <button onclick="team1Pick(1)">Team 1 Pick</button>
+                <button onclick="team2Pick(1)">Team 2 Pick</button>
+                <button onclick="clearEp(1)">Clear</button>
             </div>
             <div class="btngroup">
-                <button>ban me</button>
-                <button>pick me(blue)</button>
-                <button>pick me(red)</button>
+                <button onclick="banEp(2)">Ban</button>
+                <button onclick="team1Pick(2)">Team 1 Pick</button>
+                <button onclick="team2Pick(2)">Team 2 Pick</button>
+                <button onclick="clearEp(2)">Clear</button>
             </div>
             <div class="btngroup">
-                <button>ban me</button>
-                <button>pick me(blue)</button>
-                <button>pick me(red)</button>
+                <button onclick="banEp(3)">Ban</button>
+                <button onclick="team1Pick(3)">Team 1 Pick</button>
+                <button onclick="team2Pick(3)">Team 2 Pick</button>
+                <button onclick="clearEp(3)">Clear</button>
             </div>
             <div class="btngroup">
-                <button>ban me</button>
-                <button>pick me(blue)</button>
-                <button>pick me(red)</button>
+                <button onclick="banEp(4)">Ban</button>
+                <button onclick="team1Pick(4)">Team 1 Pick</button>
+                <button onclick="team2Pick(4)">Team 2 Pick</button>
+                <button onclick="clearEp(4)">Clear</button>
             </div>
             <div class="btngroup">
-                <button>ban me</button>
-                <button>pick me(blue)</button>
-                <button>pick me(red)</button>
+                <button onclick="banEp(5)">Ban</button>
+                <button onclick="team1Pick(5)">Team 1 Pick</button>
+                <button onclick="team2Pick(5)">Team 2 Pick</button>
+                <button onclick="clearEp(5)">Clear</button>
             </div>
             <div class="btngroup">
-                <button>ban me</button>
-                <button>pick me(blue)</button>
-                <button>pick me(red)</button>
+                <button onclick="banEp(6)">Ban</button>
+                <button onclick="team1Pick(6)">Team 1 Pick</button>
+                <button onclick="team2Pick(6)">Team 2 Pick</button>
+                <button onclick="clearEp(6)">Clear</button>
             </div>
             <div class="btngroup">
-                <button>ban me</button>
-                <button>pick me(blue)</button>
-                <button>pick me(red)</button>
-            </div><div class="btngroup">
-                <button>ban me</button>
-                <button>pick me(blue)</button>
-                <button>pick me(red)</button>
+                <button onclick="banEp(7)">Ban</button>
+                <button onclick="team1Pick(7)">Team 1 Pick</button>
+                <button onclick="team2Pick(7)">Team 2 Pick</button>
+                <button onclick="clearEp(7)">Clear</button>
+            </div>
+            <div class="btngroup">
+                <button onclick="banEp(8)">Ban</button>
+                <button onclick="team1Pick(8)">Team 1 Pick</button>
+                <button onclick="team2Pick(8)">Team 2 Pick</button>
+                <button onclick="clearEp(8)">Clear</button>
             </div>
 
         </div>
@@ -100,6 +140,29 @@
             function animateMe() {
                 document.getElementById('controls').classList.add('active-animation');
                 console.log("Wtf");
+            }
+            function banEp(ep){
+                setImage(ep, "images/episode panels/ban.png");
+                document.getElementById("ep" + ep).getElementsByClassName("ep")[0];
+                console.log("Ban Episode " + ep)
+            }
+            function team1Pick(ep){
+                setImage(ep, "images/episode panels/team 1 pick.png");
+                document.getElementById("ep" + ep).getElementsByClassName("ep")[0];
+                console.log("Team 1 pick Episode " + ep)
+            }
+            function team2Pick(ep){
+                setImage(ep, "images/episode panels/team 2 pick.png");
+                document.getElementById("ep" + ep).getElementsByClassName("ep")[0];
+                console.log("Team 2 pick Episode " + ep)
+            }
+            function clearEp(ep){
+                console.log("Clear Episode " + ep)
+                setImage(ep, "images/episode panels/blank.png");
+                
+            }
+            function setImage(ep, filepath) {
+                document.getElementById("ep" + ep).getElementsByClassName("overlay")[0].src = filepath;
             }
         </script>
 </body>
